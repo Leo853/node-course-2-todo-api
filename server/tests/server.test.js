@@ -143,7 +143,7 @@ describe('DELETE /todos/:id', () => {
 describe('PATCH /todos/:id', () => {
   it('should update a todo', (done) => {
     var hexId = todos[0]._id.toHexString();
-    var newText = 'updated todo text';
+    var newText = 'updated todo text 1';
 
     request(app)
       .patch(`/todos/${hexId}`)
@@ -168,7 +168,7 @@ describe('PATCH /todos/:id', () => {
 
   it('should clear completedAt when todo is not completed', (done) => {
     var hexId = todos[1]._id.toHexString();
-    var newText = 'updated todo text';
+    var newText = 'updated todo text 2';
 
     request(app)
       .patch(`/todos/${hexId}`)
